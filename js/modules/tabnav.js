@@ -13,7 +13,7 @@ export default class initTabNav {
 
   addTabNavEvent() {
     this.tabMenu.forEach((itemMenu, index) => {
-      itemMenu.addEventListener('click', () => { this.yactiveTab(index); });
+      itemMenu.addEventListener('click', () => { this.activeTab(index); });
     });
   }
 
