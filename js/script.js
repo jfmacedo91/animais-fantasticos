@@ -1,5 +1,6 @@
 import Accordion from './modules/accordion.js';
 import DropdownMenu from './modules/dropdown-menu.js';
+import Funcionamento from './modules/funcionamento.js';
 import MenuMobile from './modules/menu-mobile.js';
 import Modal from './modules/modal.js';
 import ScrollSuave from './modules/scroll-suave.js';
@@ -10,13 +11,14 @@ import ScrollAnima from './modules/scroll-anima.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 
-import initFuncionamento from './modules/funcionamento.js';
-
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
 
 const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
+
+const funcionamento = new Funcionamento('[data-semana]', 'aberto');
+funcionamento.init();
 
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
@@ -38,5 +40,3 @@ scrollAnima.init();
 
 fetchAnimais('./animais-api.json', '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
-
-initFuncionamento();
